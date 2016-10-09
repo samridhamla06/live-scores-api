@@ -1,0 +1,35 @@
+{
+  "name": "live-scores-api",
+  "version": "1.0.0",
+  "author": {
+    "name": "Samridh Amla",
+    "email": "samridh.amla06@gmail.com"
+  },
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.2.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.13.4",
+    "request": "^2.75.0",
+    "rss-to-json": "^1.0.2",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samridhamla06/live-scores-api.git"
+  },
+  "keywords": [],
+  "author": "Samridh Amla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samridhamla06/live-scores-api/issues"
+  },
+  "homepage": "https://github.com/samridhamla06/live-scores-api#readme"
+}
