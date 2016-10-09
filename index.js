@@ -1,11 +1,10 @@
-var helper = require(__dirname + '/helper.js');
+var helper = require('./helper.js');
 exports.getLiveScores = function(sport, team1, team2, callback) {
 
     sport = sport.replace("_"," ").toLowerCase().trim();
     team1 = team1.replace("_"," ").toLowerCase().trim();
     team2 = team2.replace("_"," ").toLowerCase().trim();
 
-    console.log("sport team1 team2" + sport + " "+ team1 + " " + team2);
 
     switch(sport){
         case "cricket":
@@ -20,7 +19,6 @@ exports.getLiveScores = function(sport, team1, team2, callback) {
 
 exports.getAllMatches = function(sport,callback) {
     sport = sport.replace("_"," ").toLowerCase().trim();
-    console.log("sport" + sport );
     if (sport == "cricket") {
         return helper.getAllCricketMatches(callback);
     }else{

@@ -1,0 +1,26 @@
+{
+  "name": "live-scores-api",
+  "version": "1.0.0",
+  "description": "Live Sports Scores/Information API  in your Node JS absolutely FREE",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.75.0",
+    "xml2js": "^0.4.17",
+    "rss-to-json": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samridhamla06/live-scores-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samridhamla06/live-scores-api/issues"
+  },
+  "homepage": "https://github.com/samridhamla06/live-scores-api#readme"
+}

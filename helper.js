@@ -12,10 +12,8 @@ function getResponseObject(team1, team2, score, keyMoment) {
 
 function extractCricketScores(match){
     var description = match.description;
-    console.log("the description is "+ description);
     description = description.replace("&amp;",",");
-    console.log("the description is "+ description);
-    var indexOfV = description.indexOf(" v ");
+    var indexOfV = description.indexOf(" v ")
     var team1 = description.substring(0,indexOfV);
     var team2 = description.substring(indexOfV + 2);
     return getResponseObject(team1.trim(),team2.trim()," "," ");
@@ -27,14 +25,12 @@ function extractOtherScores(sport,match){
         var description = match.description;
         var indexOfBracket = description.indexOf(")");
         description = description.substring(indexOfBracket+1);
-        console.log("the description is "+ description);
         var indexOfVs = description.indexOf("vs");
         var indexOfColon = description.indexOf(":");
         var indexOfHyphen = description.lastIndexOf("-");
         var l = description.length - 1;
         var team1 = description.substring(0,indexOfVs-1).replace("#"," ").trim();
         var team2 = description.substring(indexOfVs + 2,indexOfColon - 1).replace("#"," ").trim();
-        console.log("sport team1 team2"  + " "+ team1 + + " " + team2);
         var score = description.substring(indexOfColon + 1,indexOfHyphen-1).trim();
         var keyMoment = description.substring(indexOfHyphen+1).trim();
         return getResponseObject(team1,team2,score,keyMoment);
@@ -42,13 +38,11 @@ function extractOtherScores(sport,match){
         var title = match.title;
         var indexOfBracket = title.indexOf(")");
         title = title.substring(indexOfBracket + 1);
-        console.log("the title is " + title);
         var indexOfVs = title.indexOf("vs");
         var indexOfColon = title.indexOf(":");
         var l = title.length - 1;
         var team1 = title.substring(0, indexOfVs - 1).replace("#", " ").trim();
         var team2 = title.substring(indexOfVs + 2, indexOfColon - 1).replace("#", " ").trim();
-        console.log("sport team1 team2" + " " + team1 + +" " + team2);
         var score = title.substring(indexOfColon + 1).trim();
         var keyMoment = match.description;
         return getResponseObject(team1, team2, score, keyMoment);
@@ -79,13 +73,10 @@ exports.getCricketScores = function(team1,team2,callback) {
             callback(err);
         }
         if(resp.statusCode == 200){
-            console.log('matches ' + data);
             var matches = JSON.parse(data).data;
-
             for (var i=0; i<matches.length;i++ ){
                 match = matches[i];
                 if (isTheMatch(match,sport,pattern1,pattern2)){
-                    console.log('match desc is ' + match.description);
                     var response = extractCricketScores(match);
                     callback(err,response);
                     break;
@@ -110,7 +101,6 @@ exports.getOthersScores = function (sport,team1, team2,callback) {
         if (err) {
             callback(err);
         }
-        console.log(result);
         var matches = result.items;
         for (var i =0; i <matches.length ; i++){
             match = matches[i];
@@ -143,7 +133,6 @@ exports.getAllCricketMatches = function(callback) {
             callback(err);
         }
         if(resp.statusCode == 200){
-            console.log('matches ' + data);
             var matches = JSON.parse(data).data;
 
             for (var i=0; i<matches.length;i++ ){
@@ -165,7 +154,6 @@ exports.getAllOtherMatches = function(sport,callback) {
         if (err) {
             callback(err);
         }
-        console.log(result);
         var matches = result.items;
         for (var i =0; i <matches.length ; i++){
             var  matchInfo = extractOtherScores(sport,matches[i]);
