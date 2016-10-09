@@ -1,102 +1,177 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   'live-scores-api' ]
 2 info using npm@2.14.7
 3 info using node@v4.2.2
-4 verbose publish [ '.' ]
-5 silly cache add args [ '.', null ]
-6 verbose cache add spec .
+4 verbose publish [ 'live-scores-api' ]
+5 silly cache add args [ 'live-scores-api', null ]
+6 verbose cache add spec live-scores-api
 7 silly cache add parsed spec Result {
-7 silly cache add   raw: '.',
+7 silly cache add   raw: 'live-scores-api',
 7 silly cache add   scope: null,
-7 silly cache add   name: null,
-7 silly cache add   rawSpec: '.',
-7 silly cache add   spec: '/Users/samridhamla06/Desktop/image_proc/LiveScoresAPI',
-7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /Users/samridhamla06/.npm/live-scores-api/1.0.0/package.tgz not in flight; packing
-9 verbose tar pack [ '/Users/samridhamla06/.npm/live-scores-api/1.0.0/package.tgz',
-9 verbose tar pack   '/Users/samridhamla06/Desktop/image_proc/LiveScoresAPI' ]
-10 verbose tarball /Users/samridhamla06/.npm/live-scores-api/1.0.0/package.tgz
-11 verbose folder /Users/samridhamla06/Desktop/image_proc/LiveScoresAPI
-12 info prepublish live-scores-api@1.0.0
-13 verbose addLocalTarball adding from inside cache /Users/samridhamla06/.npm/live-scores-api/1.0.0/package.tgz
-14 silly cache afterAdd live-scores-api@1.0.0
-15 verbose afterAdd /Users/samridhamla06/.npm/live-scores-api/1.0.0/package/package.json not in flight; writing
-16 verbose afterAdd /Users/samridhamla06/.npm/live-scores-api/1.0.0/package/package.json written
-17 silly publish { name: 'live-scores-api',
-17 silly publish   version: '1.0.0',
-17 silly publish   description: 'Live Sports Scores/Information API  in your Node JS absolutely FREE',
-17 silly publish   main: 'index.js',
-17 silly publish   dependencies:
-17 silly publish    { debug: '^2.2.0',
-17 silly publish      express: '^4.13.4',
-17 silly publish      'body-parser': '^1.15.2',
-17 silly publish      'cookie-parser': '^1.4.3',
-17 silly publish      request: '^2.75.0',
-17 silly publish      xml2js: '^0.4.17',
-17 silly publish      'rss-to-json': '^1.0.2' },
-17 silly publish   devDependencies: {},
-17 silly publish   scripts: { test: 'test.js' },
-17 silly publish   repository:
-17 silly publish    { type: 'git',
-17 silly publish      url: 'git+https://github.com/samridhamla06/live-scores-api.git' },
-17 silly publish   keywords: [],
-17 silly publish   author: '',
-17 silly publish   license: 'ISC',
-17 silly publish   bugs: { url: 'https://github.com/samridhamla06/live-scores-api/issues' },
-17 silly publish   homepage: 'https://github.com/samridhamla06/live-scores-api#readme',
-17 silly publish   gitHead: '6408d9d75029a3abe898ee5b06ae7fd4af4dbc43',
-17 silly publish   readme: 'ERROR: No README data found!',
-17 silly publish   _id: 'live-scores-api@1.0.0',
-17 silly publish   _shasum: 'ddadde9d6ac31452b2f59d754e5570beb56ce244',
-17 silly publish   _from: '.' }
-18 verbose getPublishConfig undefined
-19 silly mapToRegistry name live-scores-api
-20 silly mapToRegistry using default registry
-21 silly mapToRegistry registry https://registry.npmjs.org/
-22 silly mapToRegistry uri https://registry.npmjs.org/live-scores-api
-23 verbose publish registryBase https://registry.npmjs.org/
-24 silly publish uploading /Users/samridhamla06/.npm/live-scores-api/1.0.0/package.tgz
-25 verbose request uri https://registry.npmjs.org/live-scores-api
-26 verbose request sending authorization for write operation
-27 info attempt registry request try #1 at 2:57:47 AM
-28 verbose request using bearer token for auth
-29 verbose request id 6f72c9b10059d93d
-30 http request PUT https://registry.npmjs.org/live-scores-api
-31 http 403 https://registry.npmjs.org/live-scores-api
-32 verbose headers { 'content-type': 'application/json',
-32 verbose headers   'cache-control': 'max-age=300',
-32 verbose headers   'content-length': '95',
-32 verbose headers   'accept-ranges': 'bytes',
-32 verbose headers   date: 'Sun, 09 Oct 2016 21:27:49 GMT',
-32 verbose headers   via: '1.1 varnish',
-32 verbose headers   connection: 'keep-alive',
-32 verbose headers   'x-served-by': 'cache-sin6924-SIN',
-32 verbose headers   'x-cache': 'MISS',
-32 verbose headers   'x-cache-hits': '0',
-32 verbose headers   'x-timer': 'S1476048468.296617,VS0,VE1029',
-32 verbose headers   vary: 'Accept-Encoding' }
-33 verbose request invalidating /Users/samridhamla06/.npm/registry.npmjs.org/live-scores-api on PUT
-34 error publish Failed PUT 403
-35 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : live-scores-api
-35 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
-35 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
-35 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
-35 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
-35 verbose stack     at emitTwo (events.js:87:13)
-35 verbose stack     at Request.emit (events.js:172:7)
-35 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1063:14)
-35 verbose stack     at emitOne (events.js:82:20)
-35 verbose stack     at Request.emit (events.js:169:7)
-35 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
-36 verbose statusCode 403
-37 verbose pkgid live-scores-api
-38 verbose cwd /Users/samridhamla06/Desktop/image_proc/LiveScoresAPI
-39 error Darwin 14.4.0
-40 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
-41 error node v4.2.2
-42 error npm  v2.14.7
-43 error code E403
-44 error "You cannot publish over the previously published version 1.0.0." : live-scores-api
-45 error If you need help, you may report this error at:
-45 error     <https://github.com/npm/npm/issues>
-46 verbose exit [ 1, true ]
+7 silly cache add   name: 'live-scores-api',
+7 silly cache add   rawSpec: '',
+7 silly cache add   spec: '*',
+7 silly cache add   type: 'range' }
+8 silly addNamed live-scores-api@*
+9 verbose addNamed "*" is a valid semver range for live-scores-api
+10 silly addNameRange { name: 'live-scores-api', range: '*', hasData: false }
+11 silly mapToRegistry name live-scores-api
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/live-scores-api
+15 verbose addNameRange registry:https://registry.npmjs.org/live-scores-api not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/live-scores-api
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 3:16:10 AM
+19 verbose request using bearer token for auth
+20 verbose request id 17a3525fde8833c6
+21 http request GET https://registry.npmjs.org/live-scores-api
+22 http 200 https://registry.npmjs.org/live-scores-api
+23 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 verbose headers   etag: '"D39CMRCZG6WRYL0L2LP3XIOAU"',
+23 verbose headers   'content-type': 'application/json',
+23 verbose headers   'content-encoding': 'gzip',
+23 verbose headers   'cache-control': 'max-age=300',
+23 verbose headers   'transfer-encoding': 'chunked',
+23 verbose headers   'accept-ranges': 'bytes',
+23 verbose headers   date: 'Sun, 09 Oct 2016 21:46:12 GMT',
+23 verbose headers   via: '1.1 varnish',
+23 verbose headers   connection: 'keep-alive',
+23 verbose headers   'x-served-by': 'cache-sin6927-SIN',
+23 verbose headers   'x-cache': 'MISS',
+23 verbose headers   'x-cache-hits': '0',
+23 verbose headers   'x-timer': 'S1476049571.184650,VS0,VE1028',
+23 verbose headers   vary: 'Accept-Encoding' }
+24 silly get cb [ 200,
+24 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 silly get     etag: '"D39CMRCZG6WRYL0L2LP3XIOAU"',
+24 silly get     'content-type': 'application/json',
+24 silly get     'content-encoding': 'gzip',
+24 silly get     'cache-control': 'max-age=300',
+24 silly get     'transfer-encoding': 'chunked',
+24 silly get     'accept-ranges': 'bytes',
+24 silly get     date: 'Sun, 09 Oct 2016 21:46:12 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-sin6927-SIN',
+24 silly get     'x-cache': 'MISS',
+24 silly get     'x-cache-hits': '0',
+24 silly get     'x-timer': 'S1476049571.184650,VS0,VE1028',
+24 silly get     vary: 'Accept-Encoding' } ]
+25 verbose get saving live-scores-api to /Users/samridhamla06/.npm/registry.npmjs.org/live-scores-api/.cache.json
+26 silly addNameRange number 2 { name: 'live-scores-api', range: '*', hasData: true }
+27 silly addNameRange versions [ 'live-scores-api', [ '1.0.0' ] ]
+28 silly addNamed live-scores-api@1.0.0
+29 verbose addNamed "1.0.0" is a plain semver version for live-scores-api
+30 silly mapToRegistry name live-scores-api
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry uri https://registry.npmjs.org/live-scores-api
+34 verbose addRemoteTarball https://registry.npmjs.org/live-scores-api/-/live-scores-api-1.0.0.tgz not in flight; adding
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/live-scores-api/-/live-scores-api-1.0.0.tgz',
+35 verbose addRemoteTarball   '3ce19d3bc5d0faed9f09db30e3a4564908a70de4' ]
+36 info retry fetch attempt 1 at 3:16:12 AM
+37 info attempt registry request try #1 at 3:16:12 AM
+38 http fetch GET https://registry.npmjs.org/live-scores-api/-/live-scores-api-1.0.0.tgz
+39 verbose request using bearer token for auth
+40 http fetch 200 https://registry.npmjs.org/live-scores-api/-/live-scores-api-1.0.0.tgz
+41 silly fetchAndShaCheck shasum 3ce19d3bc5d0faed9f09db30e3a4564908a70de4
+42 verbose addTmpTarball /var/folders/z9/tv6vcwwj5vxcslm051k6sxzh0000gn/T/npm-5492-3dfe5364/registry.npmjs.org/live-scores-api/-/live-scores-api-1.0.0.tgz not in flight; adding
+43 verbose addTmpTarball already have metadata; skipping unpack for live-scores-api@1.0.0
+44 silly cache afterAdd live-scores-api@1.0.0
+45 verbose afterAdd /Users/samridhamla06/.npm/live-scores-api/1.0.0/package/package.json not in flight; writing
+46 verbose afterAdd /Users/samridhamla06/.npm/live-scores-api/1.0.0/package/package.json written
+47 silly publish { name: 'live-scores-api',
+47 silly publish   version: '1.0.0',
+47 silly publish   author: { name: 'Samridh Amla' },
+47 silly publish   description: '',
+47 silly publish   main: 'index.js',
+47 silly publish   dependencies:
+47 silly publish    { 'cookie-parser': '^1.4.3',
+47 silly publish      debug: '^2.2.0',
+47 silly publish      'body-parser': '^1.15.2',
+47 silly publish      express: '^4.13.4',
+47 silly publish      request: '^2.75.0',
+47 silly publish      'rss-to-json': '^1.0.2',
+47 silly publish      xml2js: '^0.4.17' },
+47 silly publish   devDependencies: {},
+47 silly publish   scripts:
+47 silly publish    { test: 'echo "Error: no test specified" && exit 1',
+47 silly publish      start: 'node index.js' },
+47 silly publish   repository:
+47 silly publish    { type: 'git',
+47 silly publish      url: 'git+https://github.com/samridhamla06/live-scores-api.git' },
+47 silly publish   keywords: [],
+47 silly publish   license: 'ISC',
+47 silly publish   bugs: { url: 'https://github.com/samridhamla06/live-scores-api/issues' },
+47 silly publish   homepage: 'https://github.com/samridhamla06/live-scores-api#readme',
+47 silly publish   gitHead: 'fb22e4a4f0c36a96e35470543bd4ca443098c257',
+47 silly publish   _id: 'live-scores-api@1.0.0',
+47 silly publish   _shasum: '3ce19d3bc5d0faed9f09db30e3a4564908a70de4',
+47 silly publish   _from: 'live-scores-api@*',
+47 silly publish   _npmVersion: '2.14.7',
+47 silly publish   _nodeVersion: '4.2.2',
+47 silly publish   _npmUser: { name: 'samridh.amla06', email: 'samridh.amla06@gmail.com' },
+47 silly publish   dist:
+47 silly publish    { shasum: '3ce19d3bc5d0faed9f09db30e3a4564908a70de4',
+47 silly publish      tarball: 'https://registry.npmjs.org/live-scores-api/-/live-scores-api-1.0.0.tgz' },
+47 silly publish   maintainers: [ { name: 'samridh.amla06', email: 'samridh.amla06@gmail.com' } ],
+47 silly publish   _npmOperationalInternal:
+47 silly publish    { host: 'packages-12-west.internal.npmjs.com',
+47 silly publish      tmp: 'tmp/live-scores-api-1.0.0.tgz_1476046115702_0.5638751145452261' },
+47 silly publish   directories: {},
+47 silly publish   _resolved: 'https://registry.npmjs.org/live-scores-api/-/live-scores-api-1.0.0.tgz' }
+48 info prepublish live-scores-api@1.0.0
+49 verbose getPublishConfig undefined
+50 silly mapToRegistry name live-scores-api
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry uri https://registry.npmjs.org/live-scores-api
+54 verbose publish registryBase https://registry.npmjs.org/
+55 silly publish uploading /Users/samridhamla06/.npm/live-scores-api/1.0.0/package.tgz
+56 verbose request uri https://registry.npmjs.org/live-scores-api
+57 verbose request sending authorization for write operation
+58 info attempt registry request try #1 at 3:16:13 AM
+59 verbose request using bearer token for auth
+60 http request PUT https://registry.npmjs.org/live-scores-api
+61 http 403 https://registry.npmjs.org/live-scores-api
+62 verbose headers { 'content-type': 'application/json',
+62 verbose headers   'cache-control': 'max-age=300',
+62 verbose headers   'content-length': '95',
+62 verbose headers   'accept-ranges': 'bytes',
+62 verbose headers   date: 'Sun, 09 Oct 2016 21:46:14 GMT',
+62 verbose headers   via: '1.1 varnish',
+62 verbose headers   connection: 'keep-alive',
+62 verbose headers   'x-served-by': 'cache-sin6921-SIN',
+62 verbose headers   'x-cache': 'MISS',
+62 verbose headers   'x-cache-hits': '0',
+62 verbose headers   'x-timer': 'S1476049573.613157,VS0,VE1067',
+62 verbose headers   vary: 'Accept-Encoding' }
+63 verbose request invalidating /Users/samridhamla06/.npm/registry.npmjs.org/live-scores-api on PUT
+64 error publish Failed PUT 403
+65 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : live-scores-api
+65 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+65 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+65 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+65 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+65 verbose stack     at emitTwo (events.js:87:13)
+65 verbose stack     at Request.emit (events.js:172:7)
+65 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1063:14)
+65 verbose stack     at emitOne (events.js:82:20)
+65 verbose stack     at Request.emit (events.js:169:7)
+65 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+66 verbose statusCode 403
+67 verbose pkgid live-scores-api
+68 verbose cwd /Users/samridhamla06/Desktop/image_proc/LiveScoresAPI
+69 error Darwin 14.4.0
+70 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "live-scores-api"
+71 error node v4.2.2
+72 error npm  v2.14.7
+73 error code E403
+74 error "You cannot publish over the previously published version 1.0.0." : live-scores-api
+75 error If you need help, you may report this error at:
+75 error     <https://github.com/npm/npm/issues>
+76 verbose exit [ 1, true ]
